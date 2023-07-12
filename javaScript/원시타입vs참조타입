@@ -1,1 +1,45 @@
 
+1. 원시타입
+
+(예시1)
+let a = 100;
+a = 50;
+
+a라는 변수에 100이란 값을 할당 / 50으로 재할당 한 코드
+첫 라인이 실행 => 메모리에 Number타입의 100이란 값이 생성되고 식별자 a는 메모리에 생성된 100의 메모리 주소를 가리킴
+두번째 라인이 실행 => 메모리에 생성된 100이란 값이 50으로 수정 X, 새로운 Number타입의 50이란 값을 새로운 메모리에 생성하고 가리키던 메모리가 변경
+
+(예시2)
+let number1 = 1;
+let string1 = 'ABC';
+let bool1 = true;
+
+let number2 = number1;
+let string2 = string1;
+let bool2 = bool1;
+
+number2 = 2;
+string2 = '가나다';
+bool2 = false;
+
+console.log('~1:', number1, string1, bool1);
+console.log('~2:', number2, string2, bool2);
+
+
+2.참조타입
+자바스크립트에서 원시 타입을 제외한 나머지는 참조타입(객체(Object))이라 할 수 있다. 배열과 객체, 그리고 함수가 대표적이며,
+Object의 데이터 자체는 별도의 메모리 공간 ( heap)에 저장되며, 변수에 할당 시 데이터에 대한 주소 ( 힙(Heap) 메모리의 주소값)가 저장되기 때문에
+자바스크립트 엔진이 변수가 가지고 있는 메모리 주소를 이용해서 변수의 값에 접근하게 되는것이다.
+
+(예시)
+const obj1 = {
+  num: 1,
+  str: 'ABC',
+  bool: true
+};
+
+const obj2 = obj1;
+
+obj2.num = 2;
+
+console.log(obj1, obj2);
