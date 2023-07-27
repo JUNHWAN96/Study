@@ -1,0 +1,30 @@
+<script>
+
+    let menu =[{code : 001, menuName : '아메리카노(ICE)'},
+               {code : 002, menuName : '아메리카노(HOT)'},
+               {code : 003, menuName : '소금커피'}]
+    
+    let option =''
+    
+    menu.forEach(item=>{
+        option += '<option value="' +item.code+'">' + item.menuName + '</option>'
+    })
+    
+    console.log(option)
+    
+    document.addEventListener('DOMContentLoaded',()=>{
+        document.getElementById('menuCode').innerHTML = option
+    })
+
+    // innerHTML => 특정 태그 안에 들어갈 html
+    
+    // DOMContentLoaded 구문을 안적었을 때, 실행이 되지 않았다.
+    // DOMContentLoaded 이벤트란?
+    // 돔트리 분석이 끝나면 발생
+    //즉, 돔트리가 다 만들어진 후에 돔에 접근이 가능하기때문에, 돔이 생성되기전 돔을 조작하는 자바스크립트 코드가 실행되어 원하지 않는 결과를 내는것을 막을 수 있다.
+</script>
+
+<label>셀렉트박스연습</label>
+<select id="menuCode">
+
+</select>
