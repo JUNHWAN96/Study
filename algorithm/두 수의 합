@@ -1,0 +1,12 @@
+0 이상의 두 정수가 문자열 a, b로 주어질 때, a + b의 값을 문자열로 return 하는 solution 함수를 작성해 주세요.
+
+function solution(a, b) {
+    let answer = String(Number(a)+Number(b));
+    return answer;
+}
+
+Number 함수를 사용했는데, 정답이 틀려서 왜 그런가 했다.
+
+Number로 표현할 수 있는 값의 범위를 넘어서서, 넘어간 자리수는 0으로 채워진다.
+이를 해결하기 위해서 BigInt 사용
+
