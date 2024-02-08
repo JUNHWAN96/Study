@@ -21,10 +21,10 @@
 
 3. includes(),forEach() 함수 이용
 
-let noDupArr = []
-
-arr.forEach((item)=>{
-    if(!test.includes(item)){
-        test.push(item)
-    }
-})
+  let noDupArr = []
+  
+  arr.forEach((item)=>{
+      if(!test.includes(item)){
+          test.push(item)
+      }
+  })
