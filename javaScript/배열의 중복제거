@@ -1,0 +1,30 @@
+배열 중복제거하는 방법 (javaScript)
+
+  1. Set 이용
+
+  const arr = [1,2,3,4,4,4,5]
+  
+   - set을 이용해서 먼저 중복제거
+  const noDuplicate = new Set(arr)
+   - 배열로 복사
+  const noDupArr = [...noDuplicate]
+
+  2. index0f(),filter() 함수 이용
+  
+  indexOf 함수 => 배열에서 특정값이 처음으로 나타나는 index를 리턴
+  
+  const arr = [1,2,3,4,4,4,5]
+  
+  let noDupArr = arr.filter((item,index)=>{
+      return arr.indexOf(item) === index
+  })
+
+3. includes(),forEach() 함수 이용
+
+let noDupArr = []
+
+arr.forEach((item)=>{
+    if(!test.includes(item)){
+        test.push(item)
+    }
+})
